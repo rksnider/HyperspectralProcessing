@@ -1,0 +1,68 @@
+-- Generated from Simulink block CMOS_Kernel_Memory_Sync/MH/Memory Manager/Frame Memory Controller
+library IEEE;
+use IEEE.std_logic_1164.all;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+entity mh_frame_memory_controller is
+  port (
+    x12_bit_data_in : in std_logic_vector( 12-1 downto 0 );
+    enable_in : in std_logic_vector( 1-1 downto 0 );
+    clk_1 : in std_logic;
+    ce_1 : in std_logic;
+    data_out_72_bits : out std_logic_vector( 72-1 downto 0 );
+    data_out_ready : out std_logic_vector( 1-1 downto 0 );
+    data_address_out : out std_logic_vector( 17-1 downto 0 );
+    ram_bloack_sel_out : out std_logic_vector( 3-1 downto 0 );
+    memory_is_full : out std_logic_vector( 1-1 downto 0 );
+    new_frame_finished : out std_logic_vector( 1-1 downto 0 )
+  );
+end mh_frame_memory_controller;
+architecture structural of mh_frame_memory_controller is 
+  signal section_op_net : std_logic_vector( 8-1 downto 0 );
+  signal or_offset_4_enable_y_net : std_logic_vector( 1-1 downto 0 );
+  signal memory_full_delay_0_q_net : std_logic_vector( 1-1 downto 0 );
+  signal or_offset_5_enable_y_net : std_logic_vector( 1-1 downto 0 );
+  signal zero_value1_y_net : std_logic_vector( 9-1 downto 0 );
+  signal offset_fifo_0_full_net : std_logic;
+  signal offset_fifo_3_full_net : std_logic;
+  signal offset_fifo_1_full_net : std_logic;
+  signal offset_fifo_4_full_net : std_logic;
+  signal offset_fifo_2_full_net : std_logic;
+  signal offset_fifo_5_full_net : std_logic;
+  signal final_add_data_out_delay_q_net : std_logic_vector( 72-1 downto 0 );
+  signal add_ram_sel_delay_1_q_net : std_logic_vector( 3-1 downto 0 );
+  signal clk_net : std_logic;
+  signal memory_full_delay_2_q_net : std_logic_vector( 1-1 downto 0 );
+  signal and_input_delay_q_net : std_logic_vector( 12-1 downto 0 );
+  signal and_input_delay2_q_net : std_logic_vector( 12-1 downto 0 );
+  signal multiple_enable_delay_q_net : std_logic_vector( 1-1 downto 0 );
+  signal add_frame_and_section_s_net : std_logic_vector( 18-1 downto 0 );
+  signal multiple_frame_p_net : std_logic_vector( 10-1 downto 0 );
+  signal multiple_section_p_net : std_logic_vector( 17-1 downto 0 );
+  signal mux_input_delay_q_net : std_logic_vector( 12-1 downto 0 );
+  signal data_input_12_bit_net : std_logic_vector( 12-1 downto 0 );
+  signal final_add_enable_delay_q_net : std_logic_vector( 1-1 downto 0 );
+  signal add_data_out_delay_q_net : std_logic_vector( 72-1 downto 0 );
+  signal add_offset_with_line_count_s_net : std_logic_vector( 17-1 downto 0 );
+  signal ce_net : std_logic;
+  signal multiple_data_out_delay_q_net : std_logic_vector( 72-1 downto 0 );
+  signal write_enable_12_bit_net : std_logic_vector( 1-1 downto 0 );
+  signal memory_full_delay_1_q_net : std_logic_vector( 1-1 downto 0 );
+  signal add_enable_delay_q_net : std_logic_vector( 1-1 downto 0 );
+  signal and_ram_sel_delay_q_net : std_logic_vector( 3-1 downto 0 );
+  signal check_for_new_line_op_net : std_logic_vector( 1-1 downto 0 );
+  signal and_for_new_line_1099_check_y_net : std_logic_vector( 1-1 downto 0 );
+  signal ram_block_determination_op_net : std_logic_vector( 3-1 downto 0 );
+  signal check_for_new_frame_last_row_op_net : std_logic_vector( 1-1 downto 0 );
+  signal add_ram_sel_delay_0_q_net : std_logic_vector( 3-1 downto 0 );
+  signal add_line_delay_0_q_net : std_logic_vector( 7-1 downto 0 );
+  signal multiple_ram_sel_delay_q_net : std_logic_vector( 3-1 downto 0 );
+  signal check_new_frame_enable_delay_q_net : std_logic_vector( 1-1 downto 0 );
+  signal check_for_new_frame_last_pixel_op_net : std_logic_vector( 1-1 downto 0 );
+  signal add_line_delay_1_q_net : std_logic_vector( 7-1 downto 0 );
+  signal data_points_per_line_op_net : std_logic_vector( 7-1 downto 0 );
+  signal and_for_new_line_y_net : std_logic_vector( 1-1 downto 0 );
+  signal check_new_line_delay_q_net : std_logic_vector( 1-1 downto 0 );
+  signal offset_fifo_3_empty_net : std_logic_vector( 1-1 downto 0 );
+  signal offset_fifo_1_empty_net : std_logic_vector( 1-1 downto 0 );
+  signal fifo_delay_enable_q_net : std_logic_vector( 1-1 downto 0 );

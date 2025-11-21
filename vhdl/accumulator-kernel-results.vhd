@@ -1,0 +1,65 @@
+-- Generated from Simulink block CMOS_Kernel_Memory_Sync/MH/Math/Kernel Result 0/Accumlator Kernel Results
+library IEEE;
+use IEEE.std_logic_1164.all;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+entity mh_accumlator_kernel_results is
+  port (
+    slice_input_0 : in std_logic_vector( 64-1 downto 0 );
+    slice_enable_0 : in std_logic_vector( 1-1 downto 0 );
+    slice_input_1 : in std_logic_vector( 64-1 downto 0 );
+    slice_enable_1 : in std_logic_vector( 1-1 downto 0 );
+    slice_input_2 : in std_logic_vector( 64-1 downto 0 );
+    slice_enable_2 : in std_logic_vector( 1-1 downto 0 );
+    slice_input_3 : in std_logic_vector( 64-1 downto 0 );
+    slice_enable_3 : in std_logic_vector( 1-1 downto 0 );
+    slice_input_4 : in std_logic_vector( 64-1 downto 0 );
+    slice_enable_4 : in std_logic_vector( 1-1 downto 0 );
+    reset_collector : in std_logic_vector( 1-1 downto 0 );
+    clk_1 : in std_logic;
+    ce_1 : in std_logic;
+    kernel_output : out std_logic_vector( 128-1 downto 0 );
+    valid_kernel_output : out std_logic_vector( 1-1 downto 0 )
+  );
+end mh_accumlator_kernel_results;
+architecture structural of mh_accumlator_kernel_results is 
+  signal enable_up1_y_net : std_logic_vector( 1-1 downto 0 );
+  signal addition_0_s_net : std_logic_vector( 65-1 downto 0 );
+  signal enable_or_slice_2_y_net : std_logic_vector( 1-1 downto 0 );
+  signal added_slice_0_op_net : std_logic_vector( 1-1 downto 0 );
+  signal enable_or_slice_3_y_net : std_logic_vector( 1-1 downto 0 );
+  signal enable_or_slice_0_y_net : std_logic_vector( 1-1 downto 0 );
+  signal enable_or_slice_4_y_net : std_logic_vector( 1-1 downto 0 );
+  signal added_slice_1_op_net : std_logic_vector( 1-1 downto 0 );
+  signal addition_1_s_net : std_logic_vector( 65-1 downto 0 );
+  signal mux_slice_2_y_net : std_logic_vector( 64-1 downto 0 );
+  signal enable_or_slice_1_y_net : std_logic_vector( 1-1 downto 0 );
+  signal added_slice_2_op_net : std_logic_vector( 1-1 downto 0 );
+  signal added_slice_3_op_net : std_logic_vector( 1-1 downto 0 );
+  signal delay_enable_3_q_net : std_logic_vector( 67-1 downto 0 );
+  signal mux_slice_1_y_net : std_logic_vector( 64-1 downto 0 );
+  signal added_slice_4_op_net : std_logic_vector( 1-1 downto 0 );
+  signal mux_slice_0_y_net : std_logic_vector( 64-1 downto 0 );
+  signal hard_reset_y_net : std_logic_vector( 1-1 downto 0 );
+  signal mux_slice_3_y_net : std_logic_vector( 64-1 downto 0 );
+  signal convert_to_bool_4_y_net : std_logic_vector( 1-1 downto 0 );
+  signal mux_slice_4_y_net : std_logic_vector( 64-1 downto 0 );
+  signal delay_enable_0_q_net : std_logic_vector( 1-1 downto 0 );
+  signal convert_to_bool_0_y_net : std_logic_vector( 1-1 downto 0 );
+  signal convert_to_bool_1_y_net : std_logic_vector( 1-1 downto 0 );
+  signal addition_2_s_net : std_logic_vector( 66-1 downto 0 );
+  signal addition_3_s_net : std_logic_vector( 67-1 downto 0 );
+  signal convert_to_bool_2_y_net : std_logic_vector( 1-1 downto 0 );
+  signal convert_to_bool_3_y_net : std_logic_vector( 1-1 downto 0 );
+  signal enable_up_y_net : std_logic_vector( 1-1 downto 0 );
+  signal delay_enable_1_q_net : std_logic_vector( 1-1 downto 0 );
+  signal constant1_op_net : std_logic_vector( 32-1 downto 0 );
+  signal delay_addition_1_q_net : std_logic_vector( 64-1 downto 0 );
+  signal delay_addition_0_q_net : std_logic_vector( 64-1 downto 0 );
+  signal delay_enable_2_q_net : std_logic_vector( 1-1 downto 0 );
+  signal result_is_valid_y_net : std_logic_vector( 1-1 downto 0 );
+  signal accumulator_0_q_net : std_logic_vector( 64-1 downto 0 );
+  signal delay_enable_4_q_net : std_logic_vector( 1-1 downto 0 );
+  signal accumulator_0_q_net_x0 : std_logic_vector( 64-1 downto 0 );
+  signal accumulator_0_q_net_x1 : std_logic_vector( 64-1 downto 0 );
+  signal delay2_q_net_x1 : std_logic_vector( 1-1 downto 0 );

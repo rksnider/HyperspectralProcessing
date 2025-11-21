@@ -1,0 +1,61 @@
+-- Generated from Simulink block CMOS_Kernel_Memory_Sync/MH/Math/Kernel Result 0/Multiple and Add Offset 0
+library IEEE;
+use IEEE.std_logic_1164.all;
+library xil_defaultlib;
+use xil_defaultlib.conv_pkg.all;
+entity mh_multiple_and_add_offset_0 is
+  port (
+    pixel_0 : in std_logic_vector( 12-1 downto 0 );
+    weight_0 : in std_logic_vector( 18-1 downto 0 );
+    pixel_1 : in std_logic_vector( 12-1 downto 0 );
+    weight_1 : in std_logic_vector( 18-1 downto 0 );
+    pixel_2 : in std_logic_vector( 12-1 downto 0 );
+    weight_2 : in std_logic_vector( 18-1 downto 0 );
+    pixel_3 : in std_logic_vector( 12-1 downto 0 );
+    weight_3 : in std_logic_vector( 18-1 downto 0 );
+    pixel_4 : in std_logic_vector( 12-1 downto 0 );
+    weight_4 : in std_logic_vector( 18-1 downto 0 );
+    pixel_5 : in std_logic_vector( 12-1 downto 0 );
+    weight_5 : in std_logic_vector( 18-1 downto 0 );
+    pixel_6 : in std_logic_vector( 12-1 downto 0 );
+    weight_6 : in std_logic_vector( 18-1 downto 0 );
+    pixel_7 : in std_logic_vector( 12-1 downto 0 );
+    weight_7 : in std_logic_vector( 18-1 downto 0 );
+    pixel_8 : in std_logic_vector( 12-1 downto 0 );
+    weight_8 : in std_logic_vector( 18-1 downto 0 );
+    pixel_9 : in std_logic_vector( 12-1 downto 0 );
+    weight_9 : in std_logic_vector( 18-1 downto 0 );
+    pixel_10 : in std_logic_vector( 12-1 downto 0 );
+    weight_10 : in std_logic_vector( 18-1 downto 0 );
+    pixel_11 : in std_logic_vector( 12-1 downto 0 );
+    weight_11 : in std_logic_vector( 18-1 downto 0 );
+    valid_data : in std_logic_vector( 1-1 downto 0 );
+    clk_1 : in std_logic;
+    ce_1 : in std_logic;
+    slice_out : out std_logic_vector( 34-1 downto 0 );
+    valid_out : out std_logic_vector( 1-1 downto 0 )
+  );
+end mh_multiple_and_add_offset_0;
+architecture structural of mh_multiple_and_add_offset_0 is 
+  signal pixel_0_x_weight_0_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_6_x_weight_6_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_1_x_weight_1_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_8_x_weight_8_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_9_x_weight_9_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_7_x_weight_7_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_5_x_weight_5_p_net : std_logic_vector( 30-1 downto 0 );
+  signal combine_10_11_s_net : std_logic_vector( 31-1 downto 0 );
+  signal pixel_4_x_weight_4_p_net : std_logic_vector( 30-1 downto 0 );
+  signal combine_8_9_10_11_s_net : std_logic_vector( 32-1 downto 0 );
+  signal pixel_2_x_weight_2_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_3_x_weight_3_p_net : std_logic_vector( 30-1 downto 0 );
+  signal pixel_11_x_weight_11_p_net : std_logic_vector( 30-1 downto 0 );
+  signal combine_8_9_s_net : std_logic_vector( 31-1 downto 0 );
+  signal pixel_10_x_weight_10_p_net : std_logic_vector( 30-1 downto 0 );
+  signal delay_addition_q_net : std_logic_vector( 32-1 downto 0 );
+  signal delay_addition2_q_net : std_logic_vector( 1-1 downto 0 );
+  signal delay_addition3_q_net : std_logic_vector( 1-1 downto 0 );
+  signal delay_addition1_q_net : std_logic_vector( 1-1 downto 0 );
+  signal delay_addition_2_q_net : std_logic_vector( 1-1 downto 0 );
+  signal delay_3_q_net : std_logic_vector( 18-1 downto 0 );
+  signal delay_4_q_net : std_logic_vector( 12-1 downto 0 );
